@@ -35,10 +35,9 @@
                 <a class='btn btn-danger'>Devolver película</a>
             @else
                 <a class='btn btn-success'>Alquilar película</a>
-                {{ $pelicula['rented'] }}   
             @endif
 
-            <a class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span> Editar pelicula</a>
+            <a class="btn btn-warning" href="{{ url('/catalog/edit/' . $pelicula['id'] ) }}"><span class="glyphicon glyphicon-pencil"></span> Editar pelicula</a>
 
             <a >
                 <button type="button" class="btn btn-default">
