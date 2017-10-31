@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Movie;
 use DB;
+use Notification;
 
 use Illuminate\Http\Request;
 
@@ -36,6 +37,8 @@ class CatalogController extends Controller
         $movie->poster = $request->poster;
         $movie->synopsis = $request->synopsis;
         $movie->save();
+        $notificacion = new Notification;
+        $notificacion::success('La película se ha guardado   correctamente');
         return redirect('/catalog');
     }
 

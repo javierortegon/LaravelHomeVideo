@@ -10,7 +10,6 @@
 
         </div>
         <div class="col-sm-8">
-
             <h2>
                 {{$pelicula['title']}}
             </h2>
