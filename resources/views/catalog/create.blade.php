@@ -15,7 +15,7 @@
 			</div>
 
 			<div class="panel-body" style="padding:30px">
-                <form action="/foo/bar" method="POST">
+                <form action="{{ url('catalog/create') }}" method="POST">
 				{{-- TODO: Abrir el formulario e indicar el método POST --}}
                     {{ csrf_field() }}
 					{{-- TODO: Protección contra CSRF --}}

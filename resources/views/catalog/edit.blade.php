@@ -15,9 +15,9 @@
                 </div>
 
                 <div class="panel-body" style="padding:30px">
-                    <form action="/foo/bar" method="POST">
+                    <form action="{{ url('catalog/edit').'/'.$pelicula['id'] }}" method="POST">
                         <input type="hidden" name="_method" value="PUT">
-                    {{-- TODO: Abrir el formulario e indicar el método POST --}}
+                        {{-- TODO: Abrir el formulario e indicar el método POST --}}
                         {{ csrf_field() }}
                         {{-- TODO: Protección contra CSRF --}}
         

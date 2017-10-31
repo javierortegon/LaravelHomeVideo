@@ -41,6 +41,16 @@ Route::get('catalog/edit/{id}', [
     'uses' => 'CatalogController@getEdit'
 ]); 
 
+Route::post('catalog/create', [
+    'middleware' => 'auth',
+    'uses' => 'CatalogController@postCreate'
+]);
+
+Route::put('catalog/edit/{id}', [
+    'middleware' => 'auth',
+    'uses' => 'CatalogController@putEdit'
+]);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
