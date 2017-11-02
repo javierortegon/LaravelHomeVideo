@@ -47,7 +47,8 @@ class APICatalogController extends Controller
      */
     public function show($id)
     {
-        //
+        $movie = Movie::findOrFail( $id );
+        return response()->json( $movie );
     }
 
     /**
