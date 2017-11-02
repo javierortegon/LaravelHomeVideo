@@ -27,9 +27,14 @@ Route::post('v1/catalog', function () {
     // Zona de acceso restringido
 })->middleware('auth.basic');
 
-Route::put('/v1/catalog/{id}', function () {
+//Route::put('/v1/catalog/{id}', function () {
     // Zona de acceso restringido
-})->middleware('auth.basic');
+//})->middleware('auth.basic.once');
+
+Route::put('/v1/catalog/{id}', [
+    'middleware' => 'auth.basic.once',
+    'uses' => 'APICatalogController@show'
+]);
 
 Route::delete('/v1/catalog/{id}', function () {
     // Zona de acceso restringido
